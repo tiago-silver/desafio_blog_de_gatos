@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+    --body-background: #065E7C;
+    --main-background: #F4FCFF;
+
+    --text-color: #121214;
+    --title-color: #202024;
+
+    font-family: 'Mulish', sans-serif;
+    
+}
+
+#page{
+    display: grid;
+    height: 100vh;
+}
+
+header, footer{
+    background-color: var(--body-background);
+
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.5rem;
+
+    padding: 1.6rem 2.8rem;
+}
+header img{
+    width: 4rem;
+    height: 4rem;
+}
+header form{
+    flex: 1;
+}
+
+
+header form label{
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+
+}
+header form input{
+    background-color: rgba(255, 255, 255, 0.400);
+    color: white;
+    height: 4rem;
+    border: none;
+    border-radius: .4rem;
+    padding: 1.2rem;
+    width: 100%;
+
+    /* max-width: 24rem; */
+}
+header form input::placeholder{
+    color: white;
+    font-family: 'Mulish',sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+body{
+    font-size: 1.6rem;
+    background-color: var(--main-background);
+}
+h1, h2{
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--title-color);
+}
+
+   
+
+
+
+main img:nth-child(1){
+    width: 100%;
+    
+    
+}
+article p{
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: var(--text-color);
+}
+article, aside{
+    padding: 0 2.2rem 0 ;
+    /* max-width:38.2rem ; */
+    /* margin: 3.1rem auto 0; */
+   
+}
+.title{
+    margin: 3.1rem 0 3.1rem;
+    /* margin-top: 3.1rem;
+
+    margin-bottom: 3.1rem; */
+    
+}
+.title > .buttons{
+    display: flex;
+    gap:1.2rem ;
+}
+.title button{
+    width: 4rem;
+    height: 4rem;
+    border: none;
+    background-color: var(--body-background);
+    border-radius: 50%;
+    padding: 1.2rem;
+    margin-top: .8rem;
+}
+aside{
+    margin:3.4rem 0 4rem;
+    
+}
+aside h2{
+    margin-bottom:3.2rem ;
+}
+aside .figures-card{
+    display: grid;
+    gap: 3.2rem;
+}
+aside p{
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+figure{
+    display: flex;
+    gap: 1.6rem;
+}
+
+figure span{
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+footer{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 2.6rem;
+}
+footer p{
+    color: #fff;
+}
+
+
+@media (min-width: 768px)
+{
+    
+    main .title{
+        display: flex;
+        justify-content: space-between;
+    }
+    main img{
+        border-radius: .5rem;
+    }
+   
+    
+}
+
+@media (min-width: 1024px){
+    #page{        
+        grid-template-areas:
+        "header header"
+        "container container"
+        "footer footer"; 
+
+        
+       
+        height: 100vh;
+        
+    }
+
+    header{
+        grid-area: header;
+        justify-content: space-between;
+    }
+    
+    
+    .container{
+        display: flex;
+        grid-area: container;
+        max-width: 120rem;
+        margin: auto;
+        padding: 4.0rem 0;
+    }
+    main{
+        max-width: 60rem;
+        padding: 0 4.0rem;
+    }
+    
+
+    article{
+        padding: 0;
+    }
+    aside{
+        max-width: 38.4rem;
+        padding: 0;
+        margin: 0;
+    }
+    footer{
+        grid-area: footer;
+    }
+    
+
+}
+
+@media (min-width: 1200px) {
+    main{
+        max-width: 80rem;
+        
+    }
+}
+
+ 
